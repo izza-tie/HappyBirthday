@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: rgb(204, 197, 197);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: clamp(50px, 15vw, 150px);
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+    }
+
+    .message-box {
+      background: white;
+      padding: clamp(20px, 5vw, 30px);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-family: 'Modak', cursive;
+      font-size: clamp(24px, 8vw, 50px);
+      color: rgb(111, 119, 122);
+      -webkit-text-stroke: 2px rgb(0, 6, 8);
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: clamp(14px, 4vw, 18px);
+      color: rgb(0, 11, 15);
+      margin: 8px 0 20px 0;
+    }
+
+    input[type="password"] {
+      width: 90%;
+      max-width: 220px;
+      height: 30px;
+      font-size: clamp(14px, 3vw, 16px);
+      border-radius: 12px;
+      border: 2px solid rgb(51, 52, 53);
+      padding: 8px 12px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      outline: none;
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 15px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #000308;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
+      font-size: clamp(14px, 4vw, 16px);
+      font-family: 'Arial', sans-serif;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0, 6, 10, 0.2);
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a5b0c2;
+    }
+
+    #error {
+      color: #f70606;
+      margin-top: 10px;
+      font-size: clamp(12px, 3vw, 16px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="message-box">
+    <h2>ENTER PASSWORD</h2>
+    <p>HINT: One word I asked you, something you wont forget.</p>
+    <input type="password" id="password" placeholder="••••••••">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error"></p>
+
+    <script>
+      function checkPassword() {
+        const input = document.getElementById("password").value;
+        const correctPassword = "Ja";
+        if (input === correctPassword) {
+          window.location.href = "Note.html";
+        } else {
+          document.getElementById("error").textContent = "Wrong Password";
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>
