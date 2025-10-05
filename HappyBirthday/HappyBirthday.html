@@ -1,0 +1,123 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday, My Dear Friend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div class="candle-count-display">
+      HAPPY BIRTHDAY, JAJA!
+    </div>
+    <div class="cake">
+      <div id="candleCount" style="display:none;"></div>
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+    </div>
+    <div class="todo">
+     <h2>To do:</h2>
+        <p>1. Click on the cake to place a candle.</p>
+         <p>2. Turn your volume up</p>
+         <p>3. Blow on your mic 🎤</p>
+    </div>
+
+    <div class="hover-box" id="about-box">
+  <span class="collapsed-text">About You</span>
+  <div class="popup">
+    <p><strong>Cat vs. Dog:</strong> Both 🐱🐶</p>
+    <p><strong>Favorite dessert:</strong> Cheesecake 🍰</p>
+    <p><strong>Number:</strong> 6️⃣</p>
+    <p><strong>Top 3 emojis:</strong> ☹️😝😣</p>
+  </div>
+</div>
+
+    <div class="message-container" style="text-align:center; margin-top: 100px;">
+        <!-- The button / cover text -->
+     <h2 id="revealButton" 
+      style="cursor:pointer; color:#f5f5f5; font-family:'Poppins', sans-serif; font-size: 1.5rem; transition: 0.3s;">
+    💌 A message for you
+     </h2>
+
+      <!-- Hidden letter -->
+    <div id="letter" 
+       style="display:none; opacity:0; transition:opacity 1s ease; color:#f5f5f5; font-family:'Poppins', sans-serif; line-height:1.6; max-width:700px; margin:40px auto; text-align:left;">
+    
+      <p>Hi Jaja,</p>
+
+      <p>Happy 17th Birthday! 🎉</p>
+
+      <p>I know we only got to talk for a short time, but I just wanted to wish you a really good day — one that helps you remember how much you've accomplished and how much more you can accomplish. You have always been someone that I saw as having so much potential and motivation, and I sincerely hope that you continue to do the things that bring you to life.</p>
+
+      <p>Even in that short time we had, you made an impact — one that I honestly didn’t expect. And for that, I really want to thank you. You might not know it, because during those times, hindi na tayo nag-uusap, but you helped me with something important. Whenever I remember it, and that feeling of regret hits me, I replay the words you said to me that afternoon in my head.</p>
+
+      <p>It feels a bit awkward to actually send you one of the letters I’ve been writing all this time, but well... there’s no harm in trying, right?</p>
+
+      <p>I’ve been planning to give you a little gift for your birthday ever since I found out when it was.<br>
+    How did I find out? From your ML account — weird, I know. Sorry 😅</p>
+
+     <p>I remember you once mentioned that you were considering taking computer engineering (if I remember correctly). So, I thought this would be a fitting gift. I just worked on it whenever I found some free time — nothing big, just something I wanted to make for you.</p>
+
+     <p>I’m sorry if the design looks a bit plain — I’m not really good with art or design 😅.<br>
+    I tried to make the cake look like a cheesecake, pero mas nagmukha siyang pinagpatong-patong na pancake.<br>
+    And as for the coding part, my skills aren’t that great either — I didn’t really pay attention in our IT subjects back in Junior High.<br>
+    Well… you got me wishing I did.</p>
+
+     <p>I’ve been thinking about how things ended. It was just supposed to be a friendly interaction, but I somehow failed to play my role.<br>
+    I wish I hadn’t suggested that you block me back then.<br>
+    It wasn’t because I wanted distance — I was just embarrassed and afraid that you might find me annoying for the following days, so I tried to handle it first before it even became a problem — pinangunahan ko na.</p>
+
+     <p>Looking back, that was a mistake, and I’m really sorry for it.<br>
+    I never meant for things to turn out that way.</p>
+
+     <p>I’m not here to make things complicated or bring up the past — I just wanted to reach out again, genuinely.</p>
+
+     <p style="margin-top: 30px; opacity: 0.8;">From someone who misses you,<br><strong>– Sai</strong></p>
+    
+     <p style="text-align:center; margin-top:40px;">
+         <button id="closeLetter" class="close-btn">Close</button>
+     </p>
+
+    </div>
+    </div>
+    <script>
+    // Reveal animation
+  document.getElementById('revealButton').addEventListener('click', function() {
+    const letter = document.getElementById('letter');
+    letter.style.display = 'block';
+    setTimeout(() => {
+      letter.style.opacity = 1;
+    }, 50); // small delay for transition effect
+    this.style.opacity = 0;
+    setTimeout(() => this.style.display = 'none', 500);
+  });
+    </script>
+
+    <div class="hover-box" id="music-box">
+  <span>🎵Your song</span>
+</div>
+
+<script>
+  const musicBox = document.getElementById('music-box');
+  musicBox.addEventListener('click', () => {
+    window.open('https://open.spotify.com/track/1Q44YCmHulLTI61D3IGe2g?si=QCQ1sPreQSWDJ3TEyChhyg');
+  });
+</script>
+
+    <div class="footer">
+        Made with <svg class="heart" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.488"></g><g id="SVGRepo_iconCarrier"> <path d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z" fill="#ff6999"></path> </g></svg>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2"></script>
+  </body>
+</html>
